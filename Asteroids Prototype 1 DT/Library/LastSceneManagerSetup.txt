@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/With_Camera_And_Lazers.unity
+  isLoaded: 1
+  isActive: 1
