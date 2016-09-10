@@ -12,16 +12,41 @@ public class AsteroidSpawner : MonoBehaviour {
 	public float	maxPhi=	180f;
 	public int	maxSize=	100;
 
-	// --- Methods ---
+    // --- Methods ---
 
-	public void spawn()
-	{
-		// Variables
-		Vector3	pos=	getSpawnPos();
-		GameObject	obj=	(GameObject)GameObject.Instantiate(asteroid, pos, Quaternion.identity);
+    public void spawn(bool canmove)
+    {
+        // Variables
+        Vector3 pos = getSpawnPos();
+        GameObject obj = (GameObject)GameObject.Instantiate(asteroid, pos, Quaternion.identity);
 
-		obj.transform.parent=	transform;
-	}
+        obj.transform.parent = transform;
+        if (canmove)
+        {
+            
+            Vector3 movement = ( new Vector3( (-1) * obj.transform.position.x, (-1) * obj.transform.position.y, (-1) * obj.transform.position.z) );
+            movement.Normalize();
+            obj.GetComponent<Rigidbody>().AddForce(movement * Random.value * 400);
+        }
+    }
+
+    public void resetSpawn(GameObject obj, bool canmove)
+    {
+        obj.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        obj.transform.position = getSpawnPos();
+        if (canmove)
+        {
+
+            Vector3 movement = (new Vector3((-1) * obj.transform.position.x, (-1) * obj.transform.position.y, (-1) * obj.transform.position.z));
+            movement.Normalize();
+            obj.GetComponent<Rigidbody>().AddForce(movement * Random.value * 2);
+        }
+    }
+
+    public void update()
+    {
+
+    }
 
 	public Vector3 getSpawnPos()
 	{
@@ -47,7 +72,26 @@ public class AsteroidSpawner : MonoBehaviour {
 
 	void Start()
 	{
-		for(int i= 0; i< maxSize; i++)
-			spawn();
+        int h = 0;
+        for (int i = 0; i < maxSize; i++)
+        {
+            if (Random.value< 0.25f && h< 10)
+            {
+                h++;
+                spawn(true);
+            }
+            else
+            {
+                spawn(false);
+            }
+        }
 	}
+
+    void OnTriggerEnter(Collider col)
+    {
+        Debug.Log("HERKADERK");
+        resetSpawn(col.gameObject, Random.value< 0.25f);
+    }
+
+    //collision with lazer 
 }
