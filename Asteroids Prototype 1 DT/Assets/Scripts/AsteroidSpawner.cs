@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Math=	System.Math;
+using System.Collections.Generic;
 
 public class AsteroidSpawner : MonoBehaviour {
 	// Variables
@@ -11,41 +12,20 @@ public class AsteroidSpawner : MonoBehaviour {
 	public float	minPhi=	0f;
 	public float	maxPhi=	180f;
 	public int	maxSize=	100;
+	private Queue<int>	queue=	new Queue<int>();
 
     // --- Methods ---
 
-    public void spawn(bool canmove)
+    public void spawn()
     {
-        // Variables
-        Vector3 pos = getSpawnPos();
-        GameObject obj = (GameObject)GameObject.Instantiate(asteroid, pos, Quaternion.identity);
-
-        obj.transform.parent = transform;
-        if (canmove)
-        {
-            
-            Vector3 movement = ( new Vector3( (-1) * obj.transform.position.x, (-1) * obj.transform.position.y, (-1) * obj.transform.position.z) );
-            movement.Normalize();
-            obj.GetComponent<Rigidbody>().AddForce(movement * Random.value * 400);
-        }
+        GameObject.Instantiate(asteroid, getSpawnPos(), Quaternion.identity, transform);
     }
 
-    public void resetSpawn(GameObject obj, bool canmove)
+    public void resetSpawn(GameObject obj)
     {
         obj.GetComponent<Rigidbody>().velocity = Vector3.zero;
         obj.transform.position = getSpawnPos();
-        if (canmove)
-        {
-
-            Vector3 movement = (new Vector3((-1) * obj.transform.position.x, (-1) * obj.transform.position.y, (-1) * obj.transform.position.z));
-            movement.Normalize();
-            obj.GetComponent<Rigidbody>().AddForce(movement * Random.value * 2);
-        }
-    }
-
-    public void update()
-    {
-
+		startMoving(1);
     }
 
 	public Vector3 getSpawnPos()
@@ -67,30 +47,60 @@ public class AsteroidSpawner : MonoBehaviour {
 	{
 		return (deg*((float)Math.PI/180f));
 	}
+
+	void addToQueue(int index)
+	{
+		queue.Enqueue(index);
+	}
+
+	public void startMoving(int amt)
+	{
+		// Variables
+		int	n=	0;
+
+		for(int i= 0; i< amt; i++)
+		{
+			n=	queue.Dequeue();
+			moveAsteroid(n);
+			queue.Enqueue(n);
+		}
+	}
+
+	Vector3 getOffsetVector(Vector3 v, float offsetLength)
+	{
+		// Variables
+		float	amount=	(offsetLength*(2f*Random.value-1f));
+		Vector3	offset=	amount*(Vector3.Cross(v, Vector3.up).normalized);
+
+		return offset+v;
+	}
+
+	void moveAsteroid(int index)
+	{
+		// Variables
+		GameObject	obj=	transform.GetChild(index).gameObject;
+        Vector3 movement = new Vector3(-1f*obj.transform.position.x, -1f*obj.transform.position.y, -1f*obj.transform.position.z);
+        
+		movement=	getOffsetVector(movement, 3.2f);
+		movement.Normalize();
+        obj.GetComponent<Rigidbody>().AddForce(400f*movement*Random.value);
+	}
 	
 	// --- Scripted Methods ---
 
 	void Start()
 	{
-        int h = 0;
         for (int i = 0; i < maxSize; i++)
         {
-            if (Random.value< 0.25f && h< 10)
-            {
-                h++;
-                spawn(true);
-            }
-            else
-            {
-                spawn(false);
-            }
+			spawn();
+			addToQueue(i);
         }
+		startMoving(10);
 	}
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerEnter(Collider col) // This is when it hits the player
     {
-        Debug.Log("HERKADERK");
-        resetSpawn(col.gameObject, Random.value< 0.25f);
+        resetSpawn(col.gameObject);
     }
 
     //collision with lazer 

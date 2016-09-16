@@ -9,7 +9,7 @@ public class Player_Cam_FPS : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		Cursor.lockState=	CursorLockMode.Locked;
 	}
     
 
@@ -27,6 +27,7 @@ public class Player_Cam_FPS : MonoBehaviour {
         //I don't know what this does
         transform.rotation = Quaternion.Euler(x_Rotation, y_Rotation, 0);
 
-
+		if(Input.GetKeyDown(KeyCode.Escape))
+			Application.Quit();
 	}
 }

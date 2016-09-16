@@ -19,8 +19,7 @@ public class Click_to_Shoot : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-    
-            if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Fire1"))
         {
             //The Lazer Instantiation happens here
             GameObject Temporary_Lazer_Handler;
