@@ -48,6 +48,7 @@
      <Compile Include="Assets\Enemy_Instructions.cs" />
      <Compile Include="Assets\Player_Cam_FPS.cs" />
      <Compile Include="Assets\Rotation_Script.cs" />
+     <Compile Include="Assets\Scripts\DestroyByTime.cs" />
      <Compile Include="Assets\Scripts\InputManager\InputManager.cs" />
      <Compile Include="Assets\Scripts\Pauls Scripts\AsteroidSpawner.cs" />
      <Compile Include="Assets\Scripts\Pauls Scripts\CameraMovement.cs" />
