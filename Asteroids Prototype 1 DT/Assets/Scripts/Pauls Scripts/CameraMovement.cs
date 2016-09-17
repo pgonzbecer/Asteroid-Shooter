@@ -13,6 +13,7 @@ public class CameraMovement : MonoBehaviour {
 	{
 		rotX=	0f;
 		rotY=	0f;
+		Cursor.lockState=	CursorLockMode.Locked;
 	}
 
 	void Update()
@@ -23,5 +24,7 @@ public class CameraMovement : MonoBehaviour {
 		rotX=	Mathf.Clamp(rotX, -90f, 90f);
 
 		transform.rotation=	Quaternion.Euler(rotX, rotY, 0f);
+		if(Input.GetKeyDown(KeyCode.Escape))
+			Application.Quit();
 	}
 }
