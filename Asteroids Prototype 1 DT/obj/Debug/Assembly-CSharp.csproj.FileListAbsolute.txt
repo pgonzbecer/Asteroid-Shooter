@@ -1,0 +1,24 @@
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\UnityEngine.Networking.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\Unity.SerializationLogic.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\Unity.UNetWeaver.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\Unity.CecilTools.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\UnityEngine.xml
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\UnityEditor.xml
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\UnityEngine.UI.xml
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\Temp\bin\Debug\UnityEngine.Networking.xml
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\obj\Debug\Assembly-CSharp.dll
+C:\Users\Ultrabook\Documents\GitHub\Asteroid-Shooter\Asteroids Prototype 1 DT\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Alex\Desktop\Latest Work\Asteroid-Shooter\Asteroids Prototype 1 DT\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Desktop\Latest Work\Asteroid-Shooter\Asteroids Prototype 1 DT\obj\Debug\Assembly-CSharp.dll
+C:\Users\Alex\Desktop\Latest Work\Asteroid-Shooter\Asteroids Prototype 1 DT\obj\Debug\Assembly-CSharp.pdb

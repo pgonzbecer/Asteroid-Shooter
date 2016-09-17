@@ -63,13 +63,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
-    <Compile Include="Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Click_to_Shoot.cs" />
-    <Compile Include="Assets\Scripts\CollisionEvents.cs" />
-    <Compile Include="Assets\Scripts\Enemy_Instructions.cs" />
-    <Compile Include="Assets\Scripts\Player_Cam_FPS.cs" />
-    <Compile Include="Assets\Scripts\Spawning_Asteroids.cs" />
+    <Compile Include="Assets\Enemy_Instructions.cs" />
+    <Compile Include="Assets\Player_Cam_FPS.cs" />
+    <Compile Include="Assets\Rotation_Script.cs" />
+    <Compile Include="Assets\Scripts\InputManager\InputManager.cs" />
+    <Compile Include="Assets\Scripts\Pauls Scripts\AsteroidSpawner.cs" />
+    <Compile Include="Assets\Scripts\Pauls Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Pauls Scripts\CollisionEvents.cs" />
+    <Compile Include="Assets\Scripts\Pauls Scripts\LaserShooter.cs" />
+    <Compile Include="Assets\Scripts\ResetGame.cs" />
+    <Compile Include="Assets\Scripts\Scripts to Shoot\Alt_Click_to_Shoot.cs" />
+    <Compile Include="Assets\Scripts\Scripts to Shoot\Click_to_Shoot.cs" />
+    <Compile Include="Assets\Spawning_Asteroids.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
