@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class ResetGame : MonoBehaviour {
+
     //public variable for the timer on the game over screen
     public static bool gameOver = false;
     //timer, set to 5 seconds
@@ -26,19 +27,19 @@ public class ResetGame : MonoBehaviour {
         {
             Application.LoadLevel("With_Camera_And_Lazers");
         }
-        //check for gameover!
-        if (gameOver == true)
-        {
-            //decrement timer
-            timeLeft -= Time.deltaTime;
+        ////check for gameover!
+        //if (gameOver == true)
+        //{
+        //    //decrement timer
+        //    timeLeft -= Time.deltaTime;
 
-            if (timeLeft < 0)
-            {
-                //reset the gameover bool and reload game
-                gameOver = false;
-                Application.LoadLevel("With_Camera_And_Lazers");
-            }
-        }
+        //    if (timeLeft < 0)
+        //    {
+        //        //reset the gameover bool and reload game
+        //        gameOver = false;
+        //        Application.LoadLevel("With_Camera_And_Lazers");
+        //    }
+        //}
 
     }
 }
