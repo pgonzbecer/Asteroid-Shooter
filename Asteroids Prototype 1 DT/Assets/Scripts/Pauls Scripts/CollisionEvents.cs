@@ -8,8 +8,9 @@ public class CollisionEvents : MonoBehaviour {
     public Text G_O_Test;
 	public Mesh[]	meshes=	new Mesh[1];
 	public Material[]	materials=	new Material[1];
+    public GameObject explosion;
 
-	void Start()
+    void Start()
 	{
 		// Variables
 		int	n=	Random.Range(0, meshes.Length);
@@ -38,7 +39,9 @@ public class CollisionEvents : MonoBehaviour {
 				//destroys the Asteroid
 				//this. is the physical object, so in this case, the Asteroid has this script
 				Destroy(this.gameObject);
-			}
+                Debug.Log("this is when to instantiate explostion");
+                Instantiate(explosion, transform.position, transform.rotation);
+            }
 
 			//if asteroid hits gun or camera, game over and restart game
 			if (col.tag== "Player")
