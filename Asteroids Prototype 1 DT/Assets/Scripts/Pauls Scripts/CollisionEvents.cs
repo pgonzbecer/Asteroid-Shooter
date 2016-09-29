@@ -11,7 +11,7 @@ public class CollisionEvents : MonoBehaviour
     public GameObject objSmallerAsteroid;
     public Mesh[] meshes = new Mesh[1];
     public Material[] materials = new Material[1];
-	
+
     //Private declares
     private const float fltSMALLASTEROIDSEPARATION = 0.25f;
     private float fltTimeLimit = 3f;
@@ -149,6 +149,8 @@ public class CollisionEvents : MonoBehaviour
             ////Move the smaller asteroid
             //MoveAsteroid(i);
         }
+        //Set
+        blnCreatedSmallAsteroids = true;
     }
 
     ////Move the asteroid to player position or offset near player

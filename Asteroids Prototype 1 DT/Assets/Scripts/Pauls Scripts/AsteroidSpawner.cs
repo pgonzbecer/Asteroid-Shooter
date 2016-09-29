@@ -22,6 +22,7 @@ public class AsteroidSpawner : MonoBehaviour
     public int maxSize = 100;
     public Text endText;
     public float maxSpeed;
+    public Image Crosshair;
 
     //Private declares
     private float fltTimeLimit = 5f;
@@ -30,6 +31,9 @@ public class AsteroidSpawner : MonoBehaviour
     //Start at the beginning of the game
     private void Start()
     {
+        //activate the crosshair
+        Crosshair.enabled = true;
+
         //Set static kills, this resets the kills every game
         intKills = 0;
         //Loop to create asteroids
